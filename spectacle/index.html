@@ -35,7 +35,7 @@
       <h1>Se hele bildet<span class="punktum">.</span></h1>
       <p class="ingress">Spectacle gir små og mellomstore selskaper økonomisk innsikt og styring på CFO&#8209;nivå, uten å ansette. Du beholder regnskapsføreren din. Vi gjør tallene om til beslutninger.</p>
       <div class="hero__cta">
-        <a class="knapp knapp--messing" href="https://calendar.app.google/yTAJ3ZSgc3ZnCue6A">Book et kartleggingsmøte</a>
+        <a class="knapp knapp--messing js-booking" href="https://calendar.app.google/yTAJ3ZSgc3ZnCue6A">Book et kartleggingsmøte</a>
         <span class="hero__cta-note">Uforpliktende · 30 minutter · digitalt</span>
       </div>
     </div>
@@ -165,7 +165,7 @@
       <p class="merkelapp">Kontakt</p>
       <h2>Nysgjerrig på hva tallene dine kan fortelle?</h2>
       <p class="ingress">Book et uforpliktende kartleggingsmøte: 30 minutter, digitalt. Så ser vi sammen om Spectacle passer for selskapet ditt.</p>
-      <a class="knapp knapp--messing" href="https://calendar.app.google/yTAJ3ZSgc3ZnCue6A">Book et kartleggingsmøte</a>
+      <a class="knapp knapp--messing js-booking" href="https://calendar.app.google/yTAJ3ZSgc3ZnCue6A">Book et kartleggingsmøte</a>
       <p class="kontakt__epost">eller skriv til <a href="mailto:post@spetaclus.com">post@spetaclus.com</a></p>
       <hr class="skillelinje">
       <div class="footer">
@@ -179,6 +179,37 @@
   </section>
 
 </main>
+
+<dialog class="booking" id="booking" aria-label="Book et kartleggingsmøte">
+  <div class="booking__topp">
+    <span class="booking__tittel">Kartleggingsmøte</span>
+    <button class="booking__lukk" type="button" aria-label="Lukk">Lukk&nbsp;&#215;</button>
+  </div>
+  <iframe class="booking__ramme" title="Velg tidspunkt for kartleggingsmøte"
+          data-src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ07MlCbYEmoDXhc_yZ2hiog7-GWwIh1PmszBz8kUQd8yqzmXDx-yQZG3WpSed9W1UuxO8Xet0OY?gv=true"
+          loading="lazy"></iframe>
+</dialog>
+
+<script>
+  (function () {
+    var dialog = document.getElementById('booking');
+    if (!dialog || !dialog.showModal) return;
+    var ramme = dialog.querySelector('.booking__ramme');
+    document.querySelectorAll('.js-booking').forEach(function (lenke) {
+      lenke.addEventListener('click', function (e) {
+        e.preventDefault();
+        if (!ramme.src) ramme.src = ramme.dataset.src;
+        dialog.showModal();
+      });
+    });
+    dialog.querySelector('.booking__lukk').addEventListener('click', function () {
+      dialog.close();
+    });
+    dialog.addEventListener('click', function (e) {
+      if (e.target === dialog) dialog.close();
+    });
+  })();
+</script>
 
 </body>
 </html>
