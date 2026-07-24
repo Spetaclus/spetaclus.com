@@ -457,6 +457,7 @@ h3 {
 .booking {
   border: 0;
   border-radius: 14px;
+  margin: auto;
   padding: 0;
   width: min(94vw, 52rem);
   background: var(--papir);
