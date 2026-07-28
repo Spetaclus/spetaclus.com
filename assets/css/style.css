@@ -453,6 +453,40 @@ h3 {
   width: auto;
 }
 
+/* ---------- Språkvelger ---------- */
+.sprak {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid rgba(250, 247, 240, 0.28);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-left: 0.4rem;
+}
+
+.hero__nav .sprak__valg {
+  font-family: var(--font-tekst);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  padding: 0.4rem 0.7rem;
+  color: rgba(250, 247, 240, 0.72);
+  text-decoration: none;
+  border-bottom: 0;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.hero__nav a.sprak__valg:hover {
+  color: var(--papir);
+  background: rgba(250, 247, 240, 0.12);
+  border-bottom: 0;
+}
+
+.hero__nav .sprak__valg--aktiv {
+  background: var(--messing);
+  color: var(--gronn-mork);
+}
+
 /* ---------- Booking-modal ---------- */
 .booking {
   border: 0;
@@ -525,7 +559,11 @@ h3 {
 
 /* ---------- Mobil ---------- */
 @media (max-width: 40rem) {
-  .hero__nav {
+  /* Seksjonslenkene skjules, men språkvelgeren skal alltid være tilgjengelig */
+  .hero__nav > a {
     display: none;
+  }
+  .sprak {
+    margin-left: 0;
   }
 }
