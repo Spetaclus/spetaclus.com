@@ -23,10 +23,17 @@
 <body>
 
 <header class="hero">
+  <svg class="linsemotiv linsemotiv--hero" viewBox="0 0 600 600" fill="none" aria-hidden="true">
+    <circle cx="300" cy="300" r="299" stroke="rgba(194,154,76,0.22)"/>
+    <circle cx="300" cy="300" r="228" stroke="rgba(250,247,240,0.10)"/>
+    <circle cx="300" cy="300" r="157" stroke="rgba(194,154,76,0.16)"/>
+    <circle cx="374" cy="226" r="52" fill="rgba(250,247,240,0.05)"/>
+    <circle cx="216" cy="384" r="26" fill="rgba(194,154,76,0.14)"/>
+  </svg>
   <div class="ramme">
     <div class="hero__topp">
       <a class="hero__logo" href="#" aria-label="Spectacle, til toppen">
-        <img src="../assets/img/spectacle-logo-horisontal-hvit-glans.svg" alt="Spectacle" width="302" height="72">
+        <img src="../assets/img/spectacle-logo-horisontal-hvit.svg" alt="Spectacle" width="302" height="72">
       </a>
       <nav class="hero__nav" aria-label="Hovedmeny">
         <a href="#slik-fungerer-det">Slik fungerer det</a>
@@ -57,6 +64,49 @@
         <p class="merkelapp">Hva er Spectacle</p>
         <h2>Et økonomilag basert på dine regnskapsdata</h2>
         <p class="ingress">Regnskapsføreren din fører tallene. Spectacle gjør dem nyttige: en fast månedsleveranse med rapport, analyse og rådgivning, tilpasset ditt selskap og dine spørsmål.</p>
+        <svg class="rapport" viewBox="0 0 420 300" role="img" aria-label="Illustrasjon av en månedsrapport fra Spectacle">
+          <rect x="0" y="0" width="420" height="300" rx="12" fill="#FAF7F0"/>
+          <path d="M0 12A12 12 0 0 1 12 0h396a12 12 0 0 1 12 12v34H0z" fill="#0F3D2F"/>
+          <circle cx="30" cy="23" r="9" fill="#FAF7F0"/>
+          <circle cx="33" cy="20" r="3" fill="#0F3D2F"/>
+          <rect x="50" y="19" width="86" height="8" rx="4" fill="rgba(250,247,240,0.85)"/>
+          <rect x="352" y="19" width="44" height="8" rx="4" fill="#C29A4C"/>
+          <g fill="#E3EDE6">
+            <rect x="24" y="70" width="112" height="58" rx="8"/>
+            <rect x="154" y="70" width="112" height="58" rx="8"/>
+            <rect x="284" y="70" width="112" height="58" rx="8"/>
+          </g>
+          <g fill="#8A6420">
+            <rect x="36" y="82" width="42" height="5" rx="2.5"/>
+            <rect x="166" y="82" width="42" height="5" rx="2.5"/>
+            <rect x="296" y="82" width="42" height="5" rx="2.5"/>
+          </g>
+          <g fill="#0F3D2F">
+            <rect x="36" y="96" width="66" height="14" rx="4"/>
+            <rect x="166" y="96" width="54" height="14" rx="4"/>
+            <rect x="296" y="96" width="60" height="14" rx="4"/>
+          </g>
+          <rect x="36" y="116" width="30" height="5" rx="2.5" fill="#2E6B52"/>
+          <rect x="166" y="116" width="30" height="5" rx="2.5" fill="#A63D2F"/>
+          <rect x="296" y="116" width="30" height="5" rx="2.5" fill="#2E6B52"/>
+          <g fill="#0F3D2F" opacity="0.82">
+            <rect x="30" y="214" width="26" height="34" rx="3"/>
+            <rect x="72" y="198" width="26" height="50" rx="3"/>
+            <rect x="114" y="206" width="26" height="42" rx="3"/>
+            <rect x="156" y="180" width="26" height="68" rx="3"/>
+            <rect x="198" y="190" width="26" height="58" rx="3"/>
+          </g>
+          <g fill="#C29A4C">
+            <rect x="240" y="196" width="26" height="52" rx="3"/>
+            <rect x="282" y="172" width="26" height="76" rx="3"/>
+            <rect x="324" y="158" width="26" height="90" rx="3"/>
+            <rect x="366" y="146" width="26" height="102" rx="3"/>
+          </g>
+          <path d="M43 206 L85 190 L127 198 L169 172 L211 182 L253 188 L295 164 L337 150 L379 138"
+                fill="none" stroke="#0F3D2F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
+          <line x1="24" y1="264" x2="396" y2="264" stroke="#D8DDD6" stroke-width="1"/>
+          <rect x="24" y="276" width="150" height="6" rx="3" fill="#D8DDD6"/>
+        </svg>
       </div>
       <ul class="verdier">
         <li>
@@ -81,14 +131,32 @@
       <h2>Fra første møte til fast leveranse</h2>
       <ol class="steg">
         <li>
+          <svg class="steg__ikon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12.5" cy="13" r="9"/>
+            <circle cx="21.5" cy="19" r="9"/>
+            <circle cx="15.5" cy="10" r="2.4" fill="currentColor" stroke="none"/>
+          </svg>
           <h3>Kartleggingsmøte</h3>
           <p>Et kort, digitalt møte om selskapet, tallene og hva du trenger. Vi forbereder oss i åpne kilder på forhånd, og spør aldri om noe som kan finnes.</p>
         </li>
         <li>
+          <svg class="steg__ikon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <ellipse cx="16" cy="8" rx="11" ry="4.2"/>
+            <path d="M5 8v8c0 2.3 4.9 4.2 11 4.2"/>
+            <path d="M27 8v6.5"/>
+            <path d="M5 16v8c0 2.3 4.9 4.2 11 4.2"/>
+            <path d="M20.5 22.5l3 3 6-6.5"/>
+          </svg>
           <h3>Oppstartsprosjekt</h3>
           <p>Alle kundeforhold starter med et oppstartsprosjekt: vi rydder i datagrunnlaget, setter opp dataflyten og bygger rapportmalen. Da står den løpende leveransen på trygg grunn fra første måned.</p>
         </li>
         <li>
+          <svg class="steg__ikon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M7 3.5h13l5.5 5.5v19.5H7z"/>
+            <path d="M19.5 3.5V9.5H25.5"/>
+            <path d="M11 22.5l4-5 3.5 3 5-7"/>
+            <path d="M20.5 13.5h3v3"/>
+          </svg>
           <h3>Løpende leveranse</h3>
           <p>Fast månedsrapport og oppfølging etter avtalt leveranseliste, i den pakken som passer selskapet ditt.</p>
         </li>
@@ -168,6 +236,12 @@
   </section>
 
   <section class="seksjon seksjon--gronn" id="kontakt">
+    <svg class="linsemotiv linsemotiv--kontakt" viewBox="0 0 600 600" fill="none" aria-hidden="true">
+      <circle cx="300" cy="300" r="299" stroke="rgba(194,154,76,0.20)"/>
+      <circle cx="300" cy="300" r="212" stroke="rgba(250,247,240,0.09)"/>
+      <circle cx="226" cy="226" r="48" fill="rgba(250,247,240,0.05)"/>
+      <circle cx="384" cy="384" r="24" fill="rgba(194,154,76,0.13)"/>
+    </svg>
     <div class="ramme kontakt">
       <p class="merkelapp">Kontakt</p>
       <h2>Nysgjerrig på hva tallene dine kan fortelle?</h2>
@@ -177,7 +251,7 @@
       <hr class="skillelinje">
       <div class="footer">
         <div class="footer__venstre">
-          <img src="../assets/img/spectacle-symbol-hvit-glans.svg" alt="" width="64" height="64">
+          <img src="../assets/img/spectacle-symbol-hvit.svg" alt="" width="64" height="64">
           <span>© 2026 Spetaclus AS · Org.nr. 927 483 653</span>
         </div>
         <span>Denne siden bruker ingen informasjonskapsler og sporer deg ikke.</span>
