@@ -351,6 +351,8 @@ h3 {
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: start;
+  /* Uten dette fordeles ledig høyde mellom radene, og kolonnene kommer i utakt */
+  align-content: start;
   column-gap: 0.8rem;
 }
 
