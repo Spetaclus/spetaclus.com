@@ -309,23 +309,6 @@ h3 {
   }
 }
 
-/* ---------- Rapportgrafikk ---------- */
-.rapport {
-  display: block;
-  width: 100%;
-  max-width: 26rem;
-  height: auto;
-  margin-top: 2.25rem;
-  filter: drop-shadow(0 14px 34px rgba(8, 42, 32, 0.14));
-}
-
-@media (max-width: 52rem) {
-  .rapport {
-    max-width: 22rem;
-    margin-inline: auto;
-  }
-}
-
 /* ---------- Verdipunkter ---------- */
 .verdier {
   list-style: none;
@@ -362,27 +345,44 @@ h3 {
   }
 }
 
+/* Tallet og ikonet deler første rad; tittel og tekst spenner over begge kolonner */
 .steg li {
   counter-increment: steg;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  column-gap: 0.8rem;
 }
 
 .steg li::before {
   content: "0" counter(steg);
-  display: block;
+  grid-column: 1;
+  grid-row: 1;
   font-family: var(--font-tittel);
   font-weight: 700;
   font-size: 2rem;
   color: var(--messing-mork);
   line-height: 1;
-  margin-bottom: 0.5rem;
 }
 
 .steg__ikon {
-  display: block;
-  width: 2.1rem;
-  height: 2.1rem;
-  margin-bottom: 0.9rem;
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: start;
+  align-self: center;
+  width: 1.8rem;
+  height: 1.8rem;
   color: var(--messing-mork);
+  opacity: 0.8;
+}
+
+.steg li h3,
+.steg li p {
+  grid-column: 1 / -1;
+}
+
+.steg li h3 {
+  margin-top: 1rem;
 }
 
 /* ---------- Pakker ---------- */
